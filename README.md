@@ -1,7 +1,9 @@
-Automated Book Publication Workflow
+# Automated Book Publication Workflow
+
 An AI-enhanced system that transforms traditional book chapters with the help of LLMs, supports human editing, stores multiple versions using ChromaDB, and uses Reinforcement Learning to intelligently retrieve the best version based on user feedback.
 
- Features
+## Features
+ 
 🕸️ Web Scraping & Screenshots (via Playwright)
 
 ✍️ AI-Based Spinning (LLM-generated rewrites)
@@ -37,7 +39,7 @@ cd Automated-Book-Publication-Workflow
 
 python -m venv venv
 venv\Scripts\activate   # On Windows
-# source venv/bin/activate   # On Linux/macOS
+source venv/bin/activate   # On Linux/macOS
 
 pip install -r requirements.txt
 
