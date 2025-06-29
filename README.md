@@ -19,26 +19,41 @@ An AI-enhanced system that transforms traditional book chapters with the help of
 ## 🗂️ Folder Structure
 
 ├── ai_writer.py             # AI-based rewriting
+
 ├── reviewer.py              # Review version using LLM
+
 ├── editor.py                # (Optional) Edit logic
+
 ├── workflow_ui.py           # Streamlit interface
+
 ├── scraper.py               # Web scraping and screenshots
+
 ├── chroma_store.py          # Store/retrieve to/from ChromaDB
+
 ├── rl_search.py             # RL-powered intelligent search
+
 ├── rl_agent_model.py        # DQN-based RL agent (PyTorch)
+
 ├── train_from_logs.py       # Train RL agent from logs
+
 ├── rl_logs.jsonl            # Feedback log
+
 ├── trained_rl_agent.pth     # Saved RL model
+
 ├── requirements.txt         # Python dependencies
+
 └── README.md                # Project doc
 
 ## ⚙️ Setup Instructions
 
 git clone https://github.com/madhukaushik03/Automated-Book-Publication-Workflow.git
+
 cd Automated-Book-Publication-Workflow
 
 python -m venv venv
+
 venv\Scripts\activate   # On Windows
+
 source venv/bin/activate   # On Linux/macOS
 
 pip install -r requirements.txt
@@ -66,7 +81,9 @@ python train_from_logs.py
 ## 🧠 RL Agent Training
 
 Agent is based on Deep Q-Network (DQN) trained on user preference logs (rl_logs.jsonl).
+
 Action: version index | State: query embedding | Reward: match with user-selected version.
+
 Model: trained_rl_agent.pth
 
 ## 🎯 Future Scope
@@ -78,5 +95,6 @@ Expand to more books/chapters
 Integrate with full publishing platforms
 
 ## 👩‍💻 Developed by
+
 Madhu Kaushik – AI Enthusiast & Developer
 
