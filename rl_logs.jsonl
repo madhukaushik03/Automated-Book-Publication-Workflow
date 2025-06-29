@@ -1,0 +1,3 @@
+{"query": "modern version", "chosen_index": 0, "recommended_source": "ai_writer", "feedback_index": 0, "reward": 1.0, "sources": ["ai_writer", "human_editor", "ai_reviewer", "original"]}
+{"query": "original", "chosen_index": 3, "recommended_source": "original", "feedback_index": 3, "reward": 1.0, "sources": ["ai_writer", "human_editor", "ai_reviewer", "original"]}
+{"query": "modern version", "chosen_index": 2, "recommended_source": "ai_reviewer", "feedback_index": 0, "reward": 0.0, "sources": ["ai_writer", "human_editor", "ai_reviewer", "original"]}

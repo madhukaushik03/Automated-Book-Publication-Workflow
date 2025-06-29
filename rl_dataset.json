@@ -1,0 +1,22 @@
+[
+  {
+    "query": "most exciting part",
+    "versions": [
+      "ai_writer",
+      "human_editor",
+      "ai_reviewer",
+      "original"
+    ],
+    "scores": [0.9, 0.7, 0.6, 0.4]
+  },
+  {
+    "query": "grammatically accurate version",
+    "versions": [
+      "ai_writer",
+      "human_editor",
+      "ai_reviewer",
+      "original"
+    ],
+    "scores": [0.7, 0.9, 0.8, 0.5]
+  }
+]
