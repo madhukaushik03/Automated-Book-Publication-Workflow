@@ -1,74 +1,80 @@
-#  Automated Book Publication Workflow – AI-Powered Chapter Editor
+Automated Book Publication Workflow
+An AI-enhanced system that transforms traditional book chapters with the help of LLMs, supports human editing, stores multiple versions using ChromaDB, and uses Reinforcement Learning to intelligently retrieve the best version based on user feedback.
 
-An AI-powered pipeline to automate book publication using web scraping, content generation with Gemini API, human-in-the-loop editing, and ChromaDB-based versioning and intelligent retrieval.
+ Features
+🕸️ Web Scraping & Screenshots (via Playwright)
 
+✍️ AI-Based Spinning (LLM-generated rewrites)
 
-## Features
+👩‍💼 Human-in-the-Loop Editing via Streamlit UI
 
--  **Web Scraping & Screenshot** – Scrapes content from [Wikisource](https://en.wikisource.org/wiki/The_Gates_of_Morning/Book_1/Chapter_1)
--  **AI Chapter Spinning** – Uses Google Gemini to rewrite the chapter
--  **Human-in-the-Loop Iteration** – Optional editing/review phase before finalizing
--  **Final Review with AI** – Polishes the rewritten content
--  **ChromaDB Vector Storage** – Stores all versions with metadata
--  **RL-style Retrieval** – Search and retrieve content intelligently using semantic queries
--  **Free API & Tools Used** – Only open-source tools and Gemini (free tier)
+🧠 RL-Based Intelligent Retrieval (PyTorch + custom DQN)
 
+📦 Version Control with ChromaDB
 
-##  Tech Stack
+📈 Continuous Learning via Feedback
 
-| Layer          | Tool/Library                     |
-|----------------|----------------------------------|
-| Language       | Python                           |
-| Web Scraping   | Playwright                       |
-| AI Writing     | Gemini 1.5 Flash API (Free)      |
-| Vector DB      | ChromaDB                         |
-| Screenshot     | Playwright                       |
-| Semantic Search| Chroma with MiniLM Embeddings    |
+🗂️ Folder Structure
 
+├── ai_writer.py             # AI-based rewriting
+├── reviewer.py              # Review version using LLM
+├── editor.py                # (Optional) Edit logic
+├── workflow_ui.py           # Streamlit interface
+├── scraper.py               # Web scraping and screenshots
+├── chroma_store.py          # Store/retrieve to/from ChromaDB
+├── rl_search.py             # RL-powered intelligent search
+├── rl_agent_model.py        # DQN-based RL agent (PyTorch)
+├── train_from_logs.py       # Train RL agent from logs
+├── rl_logs.jsonl            # Feedback log
+├── trained_rl_agent.pth     # Saved RL model
+├── requirements.txt         # Python dependencies
+└── README.md                # Project doc
 
-## Project Structure
+⚙️ Setup Instructions
 
-book_ai_project/
-├── ai_writer.py
-├── chroma_store.py
-├── chroma_query.py
-├── scraper.py
-├── editor.py
-├── reviewer.py
-├── chapter1_raw.txt
-├── chapter1_spun_by_ai.txt
-├── chapter1_final_reviewed.txt
-├── chapter1_screenshot.png
-└── chroma_storage/ (auto-created)
+git clone https://github.com/madhukaushik03/Automated-Book-Publication-Workflow.git
+cd Automated-Book-Publication-Workflow
 
-##  Setup Instructions
-
-1. **Install dependencies**
+python -m venv venv
+venv\Scripts\activate   # On Windows
+# source venv/bin/activate   # On Linux/macOS
 
 pip install -r requirements.txt
-Set up your .env file
 
-GEMINI_API_KEY=your_api_key_here
-Run full pipeline
+🚀 How to Use
 
-python scraper.py            # Step 1: Scrape and screenshot
-python ai_writer.py          # Step 2: AI "spin" the chapter
-python editor.py             # Step 3: (Optional) Human editor
-python reviewer.py           # Step 4: AI reviewer finalizes
-python chroma_store.py       # Step 5: Save all versions in ChromaDB
-python chroma_query.py       # Step 6: Search content by meaning
+Scrape chapter content:
+python scraper.py
 
-Run chroma_store.py to regenerate the ChromaDB locally.
+Spin chapter with AI:
+python ai_writer.py
 
-## Learning Outcomes
-Built full AI content generation pipeline
+Review it with LLM:
+python reviewer.py
 
-Integrated free LLM API (Gemini)
+Open UI for Human-in-the-Loop Workflow:
+streamlit run workflow_ui.py
 
-Worked with semantic search and vector DB
+Use RL agent for intelligent search:
+python rl_search.py
 
-Applied human-AI collaboration principles
+Retrain RL agent from feedback logs:
+python train_from_logs.py
 
-## Contribution & License
-This project is for educational purposes only. All rights to source content remain with the original authors.
-No commercial use intended.
+🧠 RL Agent Training
+
+Agent is based on Deep Q-Network (DQN) trained on user preference logs (rl_logs.jsonl).
+Action: version index | State: query embedding | Reward: match with user-selected version.
+Model: trained_rl_agent.pth
+
+🎯 Future Scope
+
+Convert Writer/Reviewer into agentic API services
+
+Expand to more books/chapters
+
+Integrate with full publishing platforms
+
+👩‍💻 Developed by
+Madhu Kaushik – AI Enthusiast & Developer
+
