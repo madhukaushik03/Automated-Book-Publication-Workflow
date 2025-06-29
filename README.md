@@ -16,7 +16,7 @@ An AI-enhanced system that transforms traditional book chapters with the help of
 
 📈 Continuous Learning via Feedback
 
-🗂️ Folder Structure
+## 🗂️ Folder Structure
 
 ├── ai_writer.py             # AI-based rewriting
 ├── reviewer.py              # Review version using LLM
@@ -32,7 +32,7 @@ An AI-enhanced system that transforms traditional book chapters with the help of
 ├── requirements.txt         # Python dependencies
 └── README.md                # Project doc
 
-⚙️ Setup Instructions
+## ⚙️ Setup Instructions
 
 git clone https://github.com/madhukaushik03/Automated-Book-Publication-Workflow.git
 cd Automated-Book-Publication-Workflow
@@ -43,7 +43,7 @@ source venv/bin/activate   # On Linux/macOS
 
 pip install -r requirements.txt
 
-🚀 How to Use
+## 🚀 How to Use
 
 Scrape chapter content:
 python scraper.py
@@ -63,13 +63,13 @@ python rl_search.py
 Retrain RL agent from feedback logs:
 python train_from_logs.py
 
-🧠 RL Agent Training
+## 🧠 RL Agent Training
 
 Agent is based on Deep Q-Network (DQN) trained on user preference logs (rl_logs.jsonl).
 Action: version index | State: query embedding | Reward: match with user-selected version.
 Model: trained_rl_agent.pth
 
-🎯 Future Scope
+## 🎯 Future Scope
 
 Convert Writer/Reviewer into agentic API services
 
@@ -77,6 +77,6 @@ Expand to more books/chapters
 
 Integrate with full publishing platforms
 
-👩‍💻 Developed by
+## 👩‍💻 Developed by
 Madhu Kaushik – AI Enthusiast & Developer
 
